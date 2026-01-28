@@ -11,7 +11,7 @@ const Header = ({ activeSection, onNavClick }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'stringing', label: 'Stringing' },
+    { id: 'stringing_and_equipment', label: 'Services and Equipment' },
     { id: 'rackets', label: 'Racquets' },
     { id: 'coaching', label: 'Coaching' },
     { id: 'brands', label: 'Brands' },
@@ -58,6 +58,8 @@ const Header = ({ activeSection, onNavClick }: HeaderProps) => {
           	<div>Upcoming Closure: Billy goes on vacation Feb 11-Feb 21
           	</div>
           </div>
+          
+          
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (

@@ -151,7 +151,7 @@ const StringingServices = () => {
 
 
   return (
-    <section id="stringing" className="py-16 px-4 sm:px-6 bg-white">
+    <section id="stringing_and_equipment" className="py-16 px-4 sm:px-6 bg-white">
       <div className="container mx-auto max-w-7xl">
         {/* Header Section */}
        
@@ -197,17 +197,13 @@ const StringingServices = () => {
         
         {/* Professional String Selection */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Stringing Service</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Services and Equipment</h3>
+          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+            We are here to help players figure out the best strings/settings for them and strive for consistent racquet stringing for more seasoned players.  
+          </p>
         <div className="w-full h-[710px] overflow-hidden rounded-lg border border-border">
         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQT6YBqabSkREF_59mBmu9exklweBfwnf1SyJd1K89LP66YLlzXjlDa_DClCeScU6XGakxRNV1Ja3kR/pubhtml?gid=1151797333&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range=A1:F33" width="100%" height="100%"></iframe>
         </div>
-        
-          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-            Each string is carefully selected and installed by Billy based on his extensive experience 
-            with competitive players. Every choice is backed by proven performance and player feedback.
-          </p>
-          
-
           </div>
           </div>
     </section>
