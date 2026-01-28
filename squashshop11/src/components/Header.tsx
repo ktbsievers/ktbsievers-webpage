@@ -5,7 +5,8 @@ interface HeaderProps {
   activeSection: string;
   onNavClick: (sectionId: string) => void;
 }
-
+const currentDate = new Date().toLocaleDateString();
+  
 const Header = ({ activeSection, onNavClick }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -30,9 +31,12 @@ const Header = ({ activeSection, onNavClick }: HeaderProps) => {
           <div className="flex items-center space-x-4">
             <div className="relative">
               <div className="bg-burgundy rounded-2xl p-3 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <Target className="h-8 w-8 text-white" />
+                
+          <img src="public/sq.webp" height="50" width="50"/>
+          
               </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full animate-pulse"></div>
+              
+              
             </div>
             <div className="flex flex-col">
               <h1 className="text-2xl font-bold text-gray-900 tracking-tight">
@@ -40,7 +44,7 @@ const Header = ({ activeSection, onNavClick }: HeaderProps) => {
               </h1>
               <div className="flex items-center space-x-2">
                 <img 
-                  src="/mcmaster.png" 
+                  src="public/mcmaster.png" 
                   alt="McMaster University" 
                   className="h-5 w-5 opacity-70"
                 />
@@ -49,6 +53,11 @@ const Header = ({ activeSection, onNavClick }: HeaderProps) => {
             </div>
           </div>
           
+          <div className="flex flex-col">
+          Operations normal on {currentDate}
+          	<div>Upcoming Closure: Billy goes on vacation Feb 11-Feb 21
+          	</div>
+          </div>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
@@ -110,5 +119,6 @@ const Header = ({ activeSection, onNavClick }: HeaderProps) => {
     </header>
   );
 };
+
 
 export default Header; 
