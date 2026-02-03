@@ -16,9 +16,6 @@ const HeroSection = ({ onContactClick, onServicesClick }: HeroSectionProps) => {
       {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-orange-400/20 rounded-full blur-2xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-      
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Badge */}
@@ -29,21 +26,25 @@ const HeroSection = ({ onContactClick, onServicesClick }: HeroSectionProps) => {
           
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Your Local
-            <span className="block text-orange-400">Squash Experts</span>
+            Your Local <span className="text-orange-400">Squash Racquet Expert</span>
           </h1>
           
           {/* Subheading */}
           <p className="text-xl sm:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Professional stringing, quality racquets, and expert coaching 
-            <span className="font-semibold text-orange-400"> right here in your neighbourhood</span>
+            Racquet restringing and refurbished racquets 
+            <span className="font-semibold text-orange-400"> here in Hamilton, ON.</span>
+          </p>
+          
+          {/* About */}
+          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+            I am a Ph.D. candidate in Theoretical Physics at McMaster University who is also a player and equipment manager on the McMaster squash team. When I moved to Hamilton three years ago, I was surprised to find a lack of racquet stringing services for my squash racquets. Over the past three years, I have learned the about squash racquets and strings, built lasting connections in the McMaster and Ancaster Squash Clubs, and practiced of restringing squash/tennis/badminton racquets. I use the Gamma X6-FC with WISE.
           </p>
           
           {/* McMaster Affiliation */}
           <div className="flex items-center justify-center space-x-4 mb-10 p-6 bg-white/10 backdrop-blur-sm rounded-2xl max-w-2xl mx-auto">
             <div className="flex items-center space-x-3">
               <img 
-                src="/mcmaster.png" 
+                src="public/mcmaster.png" 
                 alt="McMaster University" 
                 className="h-12 w-12 rounded-lg bg-white/20 p-2"
               />
@@ -54,20 +55,22 @@ const HeroSection = ({ onContactClick, onServicesClick }: HeroSectionProps) => {
             </div>
           </div>
           
+          
+          
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
               <div className="text-sm text-white/80">Happy Customers</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">3+</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">3</div>
               <div className="text-sm text-white/80">Years Experience</div>
             </div>
-            {/* <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24 hours</div>
-              <div className="text-sm text-white/80">Turnaround</div>
-            </div> */}
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-400 mb-2">100+</div>
+              <div className="text-sm text-white/80">Racquets Strung</div>
+            </div> 
           </div>
           
           {/* Call to Action Buttons */}

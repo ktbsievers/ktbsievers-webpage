@@ -11,6 +11,7 @@ import monofilamentStrings from "@/assets/monofilament-strings.jpg";
 import naturalGutStrings from "@/assets/natural-gut-strings.jpg";
 import hybridStrings from "@/assets/hybrid-strings.jpg";
 
+
 const StringingServices = () => {
   const [expandedStrings, setExpandedStrings] = useState<string[]>([]);
 
@@ -150,7 +151,7 @@ const StringingServices = () => {
 
 
   return (
-    <section id="stringing" className="py-16 px-4 sm:px-6 bg-white">
+    <section id="stringing_and_equipment" className="py-16 px-4 sm:px-6 bg-white">
       <div className="container mx-auto max-w-7xl">
         {/* Header Section */}
        
@@ -196,154 +197,15 @@ const StringingServices = () => {
         
         {/* Professional String Selection */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Professional String Selection</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Services and Equipment</h3>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-            Each string is carefully selected and installed by Billy based on his extensive experience 
-            with competitive players. Every choice is backed by proven performance and player feedback.
+            We are here to help players figure out the best strings/settings for them and strive for consistent racquet stringing for more seasoned players.  
           </p>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-            {professionalStrings.map((string, index) => {
-              const isExpanded = expandedStrings.includes(string.name);
-              
-              return (
-                <Card key={index} className="relative hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                  {/* Popular Badge */}
-                  {string.popular && (
-                    <div className="absolute -top-2 left-4 bg-burgundy text-white px-3 py-1 rounded-full text-xs font-semibold z-10">
-                      BILLY'S CHOICE
-                    </div>
-                  )}
-                  
-                  <CardHeader className="pb-4">
-                    <div className="flex justify-between items-start mb-3">
-                      <div className="flex-1">
-                        <CardTitle className="text-lg font-bold text-gray-900 mb-2">{string.name}</CardTitle>
-                        <div className="text-2xl font-bold text-burgundy mb-2">{string.price}</div>
-                      </div>
-                      <button
-                        onClick={() => toggleStringExpansion(string.name)}
-                        className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-                        aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${string.name} details`}
-                      >
-                        {isExpanded ? (
-                          <ChevronUp className="h-5 w-5 text-gray-600" />
-                        ) : (
-                          <ChevronDown className="h-5 w-5 text-gray-600" />
-                        )}
-                      </button>
-                    </div>
-                    
-                    <div className="space-y-2 text-sm text-gray-700">
-                      <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
-                        <span>Gauge:</span>
-                        <span className="font-medium">{string.specs}</span>
-                      </div>
-                      <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
-                        <span>Color:</span>
-                        <span className="font-medium">{string.color}</span>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  
-                  {/* String Image - Always Visible */}
-                  <CardContent className="pt-0 px-6 pb-4">
-                    <div className="aspect-video relative rounded-lg overflow-hidden">
-                      <img 
-                        src={string.image} 
-                        alt={`${string.name} string`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </CardContent>
-                  
-                  {/* Expandable Content - Details Only */}
-                  <div className={`overflow-hidden transition-all duration-300 ${
-                    isExpanded ? 'max-h-[800px] sm:max-h-[700px] opacity-100' : 'max-h-0 opacity-0'
-                  }`}>
-                    <CardContent className="pt-0 px-4 sm:px-6 pb-6 sm:pb-8">
-                      <div className="space-y-3 sm:space-y-4">
-                        {/* Target Users */}
-                        <div>
-                          <h5 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Recommended For:</h5>
-                          <div className="flex flex-wrap gap-1">
-                            {string.targetUsers.map((user, idx) => (
-                              <Badge key={idx} variant="secondary" className="text-xs bg-gray-100 text-gray-700">
-                                {user}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                        
-                        {/* Billy's Professional Notes */}
-                        <div className="bg-burgundy/5 p-3 rounded-lg">
-                          <h5 className="font-semibold text-burgundy mb-2 text-sm sm:text-base">Billy's Notes:</h5>
-                          <p className="text-xs sm:text-sm text-gray-700 italic leading-relaxed">
-                            "{string.billysNotes}"
-                          </p>
-                        </div>
-                        
-                        {/* Description */}
-                        <div>
-                          <h5 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Professional Assessment:</h5>
-                          <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                            {string.description}
-                          </p>
-                        </div>
-                        
-                        {/* Features */}
-                        <div className="pb-1">
-                          <h5 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Key Performance Features:</h5>
-                          <ul className="space-y-1">
-                            {string.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-start text-xs sm:text-sm text-gray-700">
-                                <CheckCircle className="h-3 w-3 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                                <span className="leading-relaxed">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
+        <div className="w-full h-[710px] overflow-hidden rounded-lg border border-border">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQT6YBqabSkREF_59mBmu9exklweBfwnf1SyJd1K89LP66YLlzXjlDa_DClCeScU6XGakxRNV1Ja3kR/pubhtml?gid=1151797333&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range=A1:F33" width="100%" height="100%"></iframe>
         </div>
-
-        {/* Premium Racket Services */}
-        {/* <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Premium Racket Services</h3>
-          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-            Billy provides access to the best rackets in the industry, personally selected for quality, 
-            performance, and reliability. Every racket recommendation is based on extensive testing and player feedback.
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {racketServices.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border border-gray-200">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-lg font-bold text-gray-900 mb-3">{service.name}</CardTitle>
-                  <p className="text-sm text-gray-700 leading-relaxed">{service.description}</p>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <CheckCircle className="h-4 w-4 text-burgundy mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
           </div>
-        </div> */}
-
-        
-      </div>
+          </div>
     </section>
   );
 };
